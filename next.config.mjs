@@ -32,7 +32,10 @@ const nextConfig = {
            */
         },
         remotes: remote(options.isServer),
-        shared: {},
+        shared: {
+          react: { singleton: true, eager: false, requiredVersion: false },
+          "react-dom": { singleton: true, eager: false, requiredVersion: false },
+        },
         extraOptions: {
           automaticAsyncBoundary: true,
         },

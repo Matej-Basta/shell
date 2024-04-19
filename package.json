@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set NEXT_PRIVATE_LOCAL_WEBPACK=true&& next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -20,5 +20,11 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5"
-  }
+  },
+  "browserslist": [
+    ">0.5%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
 }
