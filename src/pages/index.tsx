@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import dynamic from "next/dynamic";
 //import React from "react";
 import React, {Suspense} from "react";
+import { GetServerSideProps } from 'next';
 //import RemoteMf1Component from 'Mf1/PAGES';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,3 +29,12 @@ export default function Home() {
    </div>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  // Fetch data dynamically on each request
+
+  return {
+    props: {
+    },
+  };
+};
