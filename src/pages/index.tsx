@@ -10,9 +10,9 @@ import { GetServerSideProps } from 'next';
 const inter = Inter({ subsets: ["latin"] });
 
 // @ts-ignore
-//const RemoteMf1Component = dynamic(() => import('Mf1/PAGES'));
+const RemoteMf1Component = dynamic(() => import('Mf1/PAGES'));
 // @ts-ignore
-const RemoteMf1Component = React.lazy(() => import('Mf1/PAGES'));
+//const RemoteMf1Component = React.lazy(() => import('Mf1/PAGES'));
 // @ts-ignore
 const RemoteMf2Component = dynamic(() => import('Mf2/MyComponent'), { ssr: false });
 
