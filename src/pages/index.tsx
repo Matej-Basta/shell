@@ -21,10 +21,10 @@ export default function Home() {
    <div>
    <h1>Shell Application</h1>
     {/* Next.js component rendered server side */}
-    <Suspense fallback={<div>Loading...</div>}>
+    {/* <Suspense fallback={<div>Loading...</div>}>
         <RemoteMf1Component />
-    </Suspense>
-    {/* <RemoteMf1Component /> */}
+    </Suspense> */}
+    <RemoteMf1Component />
     {/* React.js component rendered client side */}
     <RemoteMf2Component />
    </div>
