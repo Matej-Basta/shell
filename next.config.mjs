@@ -12,15 +12,15 @@ const remote = (isServer) => {
   // const location = isServer && false ? "ssr" : "chunks";
   const location = isServer ? "ssr" : "chunks";
   return {
-    Mf1: `Mf1@http://localhost:3005/_next/static/${location}/remoteEntry.js`,
-    Mf2: `Mf2@http://localhost:3008/remoteEntry.js`,
+    Mf1: `Mf1@https://mf1-tawny.vercel.app/_next/static/${location}/remoteEntry.js`, // `Mf1@http://localhost:3005/_next/static/${location}/remoteEntry.js`
+    Mf2: `Mf2@https://mf2.vercel.app/remoteEntry.js`, // `Mf2@http://localhost:3008/remoteEntry.js`
   };
 };
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config, options) => {
-    config.output.publicPath = 'http://localhost:3000/_next/';
+    config.output.publicPath = 'http://localhost:3000/_next/'; // http://localhost:3000/_next/
     config.plugins.push(
       new NextFederationPlugin({
         name: "SHELL",
