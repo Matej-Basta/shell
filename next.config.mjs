@@ -20,7 +20,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config, options) => {
-    config.output.publicPath = 'http://localhost:3000/_next/'; // http://localhost:3000/_next/
+    config.output.publicPath = 'https://shell-orcin.vercel.app/'; // http://localhost:3000/_next/
     config.plugins.push(
       new NextFederationPlugin({
         name: "SHELL",
