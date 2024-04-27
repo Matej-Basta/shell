@@ -10,7 +10,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const remote = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   return {
-    structure: isProduction ? `structure@https://mf1-tawny.vercel.app/_next/static/${location}/remoteEntry.js` : `structure@http://localhost:3005/_next/static/${location}/remoteEntry.js`,
+    structure: isProduction ? `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js` : `structure@http://localhost:3005/_next/static/${location}/remoteEntry.js`,
     products: isProduction ? `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js` : `products@http://localhost:3006/_next/static/${location}/remoteEntry.js`,
     payment: isProduction? `payment@https://mf2.vercel.app/remoteEntry.js` : `payment@http://localhost:3008/remoteEntry.js`,
   };
