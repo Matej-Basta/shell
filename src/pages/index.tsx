@@ -3,8 +3,7 @@ import dynamic from "next/dynamic";
 import React from "react";
 import { GetServerSideProps } from 'next';
 import styles from "./home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import SafeComponent from "../components/SafeComponent";
 
 // @ts-ignore
 const Header = dynamic(() => import('structure/Header'));
@@ -21,8 +20,10 @@ export default function Home() {
    <>
     <Header />
     <main className={styles.main}>
-        <Products />
+      <Products />
+      <SafeComponent>
         <Payment />
+      </SafeComponent>
     </main>
     <Footer />
    </>
