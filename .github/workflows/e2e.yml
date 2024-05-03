@@ -1,0 +1,12 @@
+name: Run on MFs' Pull Requests
+
+on:
+  repository_dispatch:
+    types: [trigger-shell-workflow]
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1
+        run: echo "This job runs when a pull request is opened or synchronized on Repo Number 2"
