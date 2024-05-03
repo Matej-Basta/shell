@@ -16,6 +16,7 @@ const isCI = process.env.CI === 'true';
     payment: isProduction? `payment@https://mf2.vercel.app/remoteEntry.js` : `payment@http://localhost:3008/remoteEntry.js`,
   };
 }; */
+// new
 const remote = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   let structureUrl, productsUrl, paymentUrl;
