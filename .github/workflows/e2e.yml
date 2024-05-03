@@ -1,7 +1,7 @@
 name: Run on MFs' Pull Requests
 
 on:
-  repository_dispatch:
+  workflow_dispatch:
   push:
     branches:
       - main
