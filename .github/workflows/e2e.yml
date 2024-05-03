@@ -2,7 +2,9 @@ name: Run on MFs' Pull Requests
 
 on:
   repository_dispatch:
-    types: [trigger-shell-workflow]
+  push:
+    branches:
+      - main
 
 jobs:
   my-job:
