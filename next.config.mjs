@@ -12,9 +12,9 @@ const remote = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   let structureUrl, productsUrl, paymentUrl;
   if (isPreview) {
-    structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
-    productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
-    paymentUrl = `payment@https://mf2.vercel.app/remoteEntry.js`; 
+    structureUrl = `structure@https://structure-staging.vercel.app/_next/static/${location}/remoteEntry.js`; 
+    productsUrl = `products@https://mf-products-staging.vercel.app/_next/static/${location}/remoteEntry.js`; 
+    paymentUrl = `payment@https://mf2-staging.vercel.app/remoteEntry.js`; 
   } else if (isProduction) {
     structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
     productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
@@ -39,7 +39,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   webpack: (config, options) => {
-    config.output.publicPath = isProduction ? 'https://shell-orcin.vercel.app/' : 'http://localhost:3000/_next/';
+    config.output.publicPath = isPreview ? 'https://shell-staging.vercel.app/' : (isProduction ? 'https://shell-orcin.vercel.app/' : 'http://localhost:3000/_next/');
     config.plugins.push(
       new NextFederationPlugin({
         name: "SHELL",
