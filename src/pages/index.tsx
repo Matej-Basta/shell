@@ -24,7 +24,7 @@ export default function Home() {
       <SafeComponent>
         <Payment />
       </SafeComponent>
-      {process.env.VERCEL_ENV}
+      <p> here: {process.env.VERCEL_ENV}</p>
       <p>hello world</p>
     </main>
     <Footer />
