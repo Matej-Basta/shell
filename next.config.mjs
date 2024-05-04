@@ -11,14 +11,14 @@ const isPreview = process.env.NODE_ENV === 'preview';
 const remote = (isServer) => {
   const location = isServer ? "ssr" : "chunks";
   let structureUrl, productsUrl, paymentUrl;
-  if (isProduction) {
-    structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
-    productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
-    paymentUrl = `payment@https://mf2.vercel.app/remoteEntry.js`; 
-  } else if (isPreview) {
+  if (isPreview) {
     structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
     productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
     paymentUrl = `payment@https://mf2.vercel.app/remoteEntry.jsa`; 
+  } else if (isProduction) {
+    structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
+    productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
+    paymentUrl = `payment@https://mf2.vercel.app/remoteEntry.js`; 
   } else {
     structureUrl = `structure@http://localhost:3005/_next/static/${location}/remoteEntry.js`; 
     productsUrl = `products@http://localhost:3006/_next/static/${location}/remoteEntry.js`; 
