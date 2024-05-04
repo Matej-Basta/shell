@@ -15,7 +15,6 @@ const Products = dynamic(() => import('products/Products'));
 const Payment = dynamic(() => import('payment/Payment'), { ssr: false });
 
 export default function Home() {
-  //test
 
   return (
    <>
