@@ -14,7 +14,7 @@ const remote = (isServer) => {
   if (isPreview) {
     structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
     productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
-    paymentUrl = `payment@https://mf2.vercel.app/remoteEntry.jsa`; 
+    paymentUrl = `payment@https://mf2.vercel.app/remoteEntry.js`; 
   } else if (isProduction) {
     structureUrl = `structure@https://structure-dusky.vercel.app/_next/static/${location}/remoteEntry.js`; 
     productsUrl = `products@https://mf-products-ten.vercel.app/_next/static/${location}/remoteEntry.js`; 
