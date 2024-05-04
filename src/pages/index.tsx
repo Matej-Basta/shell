@@ -24,7 +24,8 @@ export default function Home() {
       <SafeComponent>
         <Payment />
       </SafeComponent>
-      {process.env.NODE_ENV}
+      {process.env.ENVIRONMENT}
+      <p>hello world</p>
     </main>
     <Footer />
    </>
